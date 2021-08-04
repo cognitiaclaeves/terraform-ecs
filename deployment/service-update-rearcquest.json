@@ -1,0 +1,10 @@
+{
+    "cluster": "rearcquest-dev",
+    "service": "rearcquest-web",
+    "taskDefinition": "@@TASKDEFINITION_ARN@@",
+    "desiredCount": 3,
+    "deploymentConfiguration": {
+        "maximumPercent": 100,
+        "minimumHealthyPercent": 0
+    }
+}

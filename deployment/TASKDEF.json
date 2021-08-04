@@ -1,0 +1,22 @@
+{
+  "family": "rearcquest",
+  "containerDefinitions": [
+    {
+      "name": "rearcquest-web",
+      "image": "015108524630.dkr.ecr.us-east-1.amazonaws.com/rearc/quest:latest",
+      "environment": [
+          {
+              "name": "SECRET_WORD",
+              "value": "TwelveFactor"
+          }
+      ],      
+      "memory": 128,
+      "portMappings": [
+        {
+          "containerPort": 3000,
+          "protocol": "tcp"
+        }
+      ]    
+    }
+  ]
+}

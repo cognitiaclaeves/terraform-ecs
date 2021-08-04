@@ -17,6 +17,14 @@ data "aws_ami" "latest_ecs_ami" {
     values = ["hvm"]
   }
 
+  ########## Originally pulled an ARM archicture ECS AMI
+  ########## And failed to launch an i386/x86_64 instance
+
+  filter {
+    name = "architecture"
+    values = ["x86_64"]
+  }
+
   owners = ["amazon"]
 }
 

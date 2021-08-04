@@ -1,0 +1,10 @@
+{
+    "cluster": "rearcquest-dev",
+    "service": "rearcquest-web",
+    "taskDefinition": "arn:aws:ecs:us-east-1:015108524630:task-definition/rearcquest:9",
+    "desiredCount": 3,
+    "deploymentConfiguration": {
+        "maximumPercent": 100,
+        "minimumHealthyPercent": 0
+    }
+}

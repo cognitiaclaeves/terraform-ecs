@@ -1,0 +1,135 @@
+{
+    "service": {
+        "serviceArn": "arn:aws:ecs:us-east-1:015108524630:service/rearcquest-dev/rearcquest-web",
+        "serviceName": "rearcquest-web",
+        "clusterArn": "arn:aws:ecs:us-east-1:015108524630:cluster/rearcquest-dev",
+        "loadBalancers": [
+            {
+                "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:015108524630:targetgroup/rearcquest-dev-rearcquest-dev/4e7e6fed994116af",
+                "containerName": "rearcquest-web",
+                "containerPort": 3000
+            }
+        ],
+        "serviceRegistries": [],
+        "status": "ACTIVE",
+        "desiredCount": 3,
+        "runningCount": 3,
+        "pendingCount": 0,
+        "launchType": "EC2",
+        "taskDefinition": "arn:aws:ecs:us-east-1:015108524630:task-definition/rearcquest:9",
+        "deploymentConfiguration": {
+            "deploymentCircuitBreaker": {
+                "enable": false,
+                "rollback": false
+            },
+            "maximumPercent": 100,
+            "minimumHealthyPercent": 0
+        },
+        "deployments": [
+            {
+                "id": "ecs-svc/4810443725691066884",
+                "status": "PRIMARY",
+                "taskDefinition": "arn:aws:ecs:us-east-1:015108524630:task-definition/rearcquest:9",
+                "desiredCount": 3,
+                "pendingCount": 0,
+                "runningCount": 0,
+                "failedTasks": 0,
+                "createdAt": "2021-08-04T14:54:51.134000-05:00",
+                "updatedAt": "2021-08-04T14:54:51.134000-05:00",
+                "launchType": "EC2",
+                "rolloutState": "IN_PROGRESS",
+                "rolloutStateReason": "ECS deployment ecs-svc/4810443725691066884 in progress."
+            },
+            {
+                "id": "ecs-svc/3814286359306888412",
+                "status": "ACTIVE",
+                "taskDefinition": "arn:aws:ecs:us-east-1:015108524630:task-definition/rearcquest:7",
+                "desiredCount": 3,
+                "pendingCount": 0,
+                "runningCount": 3,
+                "failedTasks": 0,
+                "createdAt": "2021-08-04T14:42:54.851000-05:00",
+                "updatedAt": "2021-08-04T14:49:50.903000-05:00",
+                "launchType": "EC2",
+                "rolloutState": "COMPLETED",
+                "rolloutStateReason": "ECS deployment ecs-svc/3814286359306888412 completed."
+            }
+        ],
+        "roleArn": "arn:aws:iam::015108524630:role/ecs/rearcquest-dev_ecs_lb_role",
+        "events": [
+            {
+                "id": "b0c8f82c-b795-4a4d-8022-0a03a364e8ec",
+                "createdAt": "2021-08-04T14:49:50.912000-05:00",
+                "message": "(service rearcquest-web) has reached a steady state."
+            },
+            {
+                "id": "b49b47b4-1853-4c47-bf6f-efd973bd6cc7",
+                "createdAt": "2021-08-04T14:49:50.911000-05:00",
+                "message": "(service rearcquest-web) (deployment ecs-svc/3814286359306888412) deployment completed."
+            },
+            {
+                "id": "576fa76e-b975-4dfe-86a0-ba7172e6ea7d",
+                "createdAt": "2021-08-04T14:49:00.336000-05:00",
+                "message": "(service rearcquest-web) has stopped 3 running tasks: (task 14a2a0bf18354d83afd22f7b8632155f) (task 6723815c83d84c278e3b6c0e04bc0669) (task bb66cd8a2503457fba763ab20eef93d5)."
+            },
+            {
+                "id": "644ffee1-c3ef-4648-b58d-7868f10e335f",
+                "createdAt": "2021-08-04T14:43:56.483000-05:00",
+                "message": "(service rearcquest-web) has begun draining connections on 3 tasks."
+            },
+            {
+                "id": "a93494fb-5717-4b8e-91a6-dd93ccfdabd9",
+                "createdAt": "2021-08-04T14:43:56.482000-05:00",
+                "message": "(service rearcquest-web) deregistered 3 targets in (target-group arn:aws:elasticloadbalancing:us-east-1:015108524630:targetgroup/rearcquest-dev-rearcquest-dev/4e7e6fed994116af)"
+            },
+            {
+                "id": "907899ab-78c0-4ba1-8a84-ab8b87b6525e",
+                "createdAt": "2021-08-04T14:43:15.229000-05:00",
+                "message": "(service rearcquest-web) registered 3 targets in (target-group arn:aws:elasticloadbalancing:us-east-1:015108524630:targetgroup/rearcquest-dev-rearcquest-dev/4e7e6fed994116af)"
+            },
+            {
+                "id": "2892e4a9-d739-48e1-abb6-eb9812736114",
+                "createdAt": "2021-08-04T14:43:03.685000-05:00",
+                "message": "(service rearcquest-web) has started 3 tasks: (task 3b49a1124e194313b6bd1904faddca38) (task f19e6d101d044feaacd411655436c00f) (task 377e3a716d1f4604a566801ef05f8daf)."
+            },
+            {
+                "id": "fefbf228-6845-4e52-86f3-53389275791a",
+                "createdAt": "2021-08-04T14:32:17.297000-05:00",
+                "message": "(service rearcquest-web) has reached a steady state."
+            },
+            {
+                "id": "0103c79b-d776-4afa-b7ac-912ff053377e",
+                "createdAt": "2021-08-04T14:32:17.296000-05:00",
+                "message": "(service rearcquest-web) (deployment ecs-svc/7591330490641325875) deployment completed."
+            },
+            {
+                "id": "9e2ba93d-31a5-4f25-8e76-74791e2a4095",
+                "createdAt": "2021-08-04T14:31:57.787000-05:00",
+                "message": "(service rearcquest-web) registered 3 targets in (target-group arn:aws:elasticloadbalancing:us-east-1:015108524630:targetgroup/rearcquest-dev-rearcquest-dev/4e7e6fed994116af)"
+            },
+            {
+                "id": "e7e1f716-0637-44fb-9666-73ee7a713b6b",
+                "createdAt": "2021-08-04T14:31:16.243000-05:00",
+                "message": "(service rearcquest-web) has started 3 tasks: (task 14a2a0bf18354d83afd22f7b8632155f) (task bb66cd8a2503457fba763ab20eef93d5) (task 6723815c83d84c278e3b6c0e04bc0669)."
+            }
+        ],
+        "createdAt": "2021-08-04T14:31:14.161000-05:00",
+        "placementConstraints": [],
+        "placementStrategy": [
+            {
+                "type": "spread",
+                "field": "attribute:ecs.availability-zone"
+            },
+            {
+                "type": "spread",
+                "field": "instanceId"
+            }
+        ],
+        "healthCheckGracePeriodSeconds": 0,
+        "schedulingStrategy": "REPLICA",
+        "createdBy": "arn:aws:iam::015108524630:user/admin",
+        "enableECSManagedTags": true,
+        "propagateTags": "NONE",
+        "enableExecuteCommand": false
+    }
+}

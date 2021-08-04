@@ -1,0 +1,22 @@
+{
+  "family": "rearcquest",
+  "containerDefinitions": [
+    {
+      "name": "rearcquest-web",
+      "image": @VERSION@,
+      "environment": [
+          {
+              "name": "SECRET_WORD",
+              "value": "TwelveFactor"
+          }
+      ],      
+      "memory": 128,
+      "portMappings": [
+        {
+          "containerPort": 3000,
+          "protocol": "tcp"
+        }
+      ]    
+    }
+  ]
+}

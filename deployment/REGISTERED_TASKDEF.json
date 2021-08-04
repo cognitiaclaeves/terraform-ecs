@@ -1,0 +1,45 @@
+{
+    "taskDefinition": {
+        "taskDefinitionArn": "arn:aws:ecs:us-east-1:015108524630:task-definition/rearcquest:9",
+        "containerDefinitions": [
+            {
+                "name": "rearcquest-web",
+                "image": "015108524630.dkr.ecr.us-east-1.amazonaws.com/rearc/quest:latest",
+                "cpu": 0,
+                "memory": 128,
+                "portMappings": [
+                    {
+                        "containerPort": 3000,
+                        "hostPort": 0,
+                        "protocol": "tcp"
+                    }
+                ],
+                "essential": true,
+                "environment": [
+                    {
+                        "name": "SECRET_WORD",
+                        "value": "TwelveFactor"
+                    }
+                ],
+                "mountPoints": [],
+                "volumesFrom": []
+            }
+        ],
+        "family": "rearcquest",
+        "revision": 9,
+        "volumes": [],
+        "status": "ACTIVE",
+        "requiresAttributes": [
+            {
+                "name": "com.amazonaws.ecs.capability.ecr-auth"
+            }
+        ],
+        "placementConstraints": [],
+        "compatibilities": [
+            "EXTERNAL",
+            "EC2"
+        ],
+        "registeredAt": "2021-08-04T14:54:49.583000-05:00",
+        "registeredBy": "arn:aws:iam::015108524630:user/admin"
+    }
+}
